@@ -1,0 +1,278 @@
+<div class="gallery container">
+  
+  <button class="button gallery__button--bottom pointer" type="button" data-modal-open>contact us</button>
+  <h2 class="gallery_title" style="position: relative">
+        creating
+      </h2>
+  
+  
+
+  <div class="gallery__box-list">
+    <ul class="gallery__list">
+      <!-------------------------- PANCAKES ----------------------------->
+      <li class="gallery__item">
+        <picture class="gallery__picture">
+          <source
+            srcset="
+              ./images/gallery/pancakes-1x.jpg,
+              ./images/gallery/pancakes-2x.jpg
+            "
+            media="(min-width:1440px)"
+          />
+          <source
+            srcset="
+              ./images/gallery/pancakes-tablet-1x.jpg,
+              ./images/gallery/pancakes-tablet-2x.jpg
+            "
+            media="(min-width:768px)"
+          />
+          <source
+            srcset="
+              ./images/gallery/pancakes-mobile-1x.jpg,
+              ./images/gallery/pancakes-mobile-2x.jpg
+            "
+            media="(min-width:480px)"
+          />
+          <img
+            class="gallery__image"
+            src="./images/gallery/pancakes-mobile-1x.jpg"
+            alt="pancakes"
+          />
+        </picture>
+        <h3 class="gallery_description" style="position:relative">
+          <svg class="gallery_description-breakfast" width="16" height="16">
+            <use href="./images/icons-sprite.svg#icon-g-icon-breakfast"></use>
+          </svg>
+          breakfasts
+        </h3>
+        <div class="gallery_tags-list">
+          <p class="gallery_tags">awaken the metabolism</p>
+          <p class="gallery_tags">energy supply</p>
+          <p class="gallery_tags">necessary ingredients</p>
+        </div>
+      </li>
+      <!----------------------------- LUNCH ---------------------->
+      <li class="gallery__item">
+        <picture class="gallery_picture">
+          <source
+            srcset="
+              ./images/gallery/lunch-1x.jpg,
+              ./images/gallery/lunch-2x.jpg
+            "
+            media="(min-width:1440px)"
+          />
+          <source
+            srcset="
+              ./images/gallery/lunch-tablet-1x.jpg,
+              ./images/gallery/lunch-tablet-2x.jpg
+            "
+            media="(min-width:768px)"
+          />
+          <source
+            srcset="
+              ./images/gallery/lunch-mobile-1x.jpg,
+              ./images/gallery/lunch-mobile-2x.jpg
+            "
+            media="(min-width:480px)"
+          />
+          <img
+            class="gallery__image"
+            src="./images/gallery/lunch-mobile-1x.jpg"
+            alt="pancakes"
+          />
+        </picture>
+        <h3 class="gallery_description">
+          <svg class="gallery_description-lunch" width="16" height="16">
+            <use href="./images/icons-sprite.svg#icon-g-icon-square"></use></svg
+          >lunches
+        </h3>
+        <div class="gallery_tags-list">
+          <p class="gallery_tags">awaken the metabolism</p>
+          <p class="gallery_tags">energy supply</p>
+          <p class="gallery_tags">necessary ingredients</p>
+        </div>
+      </li>
+      <!---------------------------------- CAKE --------------------------->
+      <li class="gallery__item">
+        <picture class="gallery_picture">
+          <source
+            srcset="./images/gallery/cake-1x.jpg, ./images/gallery/cake-2x.jpg"
+            media="(min-width:1440px)"
+          />
+          <source
+            srcset="
+              ./images/gallery/cake-tablet-1x.jpg,
+              ./images/gallery/cake-tablet-2x.jpg
+            "
+            media="(min-width:768px)"
+          />
+          <source
+            srcset="
+              ./images/gallery/cake-mobile-1x.jpg,
+              ./images/gallery/cake-mobile-2x.jpg
+            "
+            media="(min-width:480px)"
+          />
+          <img
+            class="gallery__image"
+            src="./images/gallery/cake-mobile-1x.jpg"
+            alt="pancakes"
+          />
+        </picture>
+        <h3 class="gallery_description">
+          <svg class="gallery_description-desert" width="16" height="16">
+            <use
+              href="./images/icons-sprite.svg#icon-g-icon-star-desert"
+            ></use></svg
+          >deserts
+        </h3>
+        <div class="gallery_tags-list">
+          <p class="gallery_tags">awaken the metabolism</p>
+          <p class="gallery_tags">energy supply</p>
+          <p class="gallery_tags">necessary ingredients</p>
+        </div>
+      </li>
+      <!--------------------------------- TOST --------------------------------->
+      <li class="gallery__item">
+        <picture class="gallery_picture">
+          <source
+            srcset="./images/gallery/tost-1x.jpg, ./images/gallery/tost-2x.jpg"
+            media="(min-width:1440px)"
+          />
+          <source
+            srcset="
+              ./images/gallery/tost-tablet-1x.jpg,
+              ./images/gallery/tost-tablet-2x.jpg
+            "
+            media="(min-width:768px)"
+          />
+          <source
+            srcset="
+              ./images/gallery/tost-mobile-1x.jpg,
+              ./images/gallery/tost-mobile-2x.jpg
+            "
+            media="(min-width:480px)"
+          />
+          <img
+            class="gallery__image"
+            src="./images/gallery/tost-mobile-1x.jpg"
+            alt="pancakes"
+          />
+        </picture>
+        <h3 class="gallery_description">
+          <svg class="gallery_description-dinner" width="16" height="16">
+            <use href="./images/icons-sprite.svg#icon-g-icon-dinner"></use></svg
+          >dinners
+        </h3>
+        <div class="gallery_tags-list">
+          <p class="gallery_tags">awaken the metabolism</p>
+          <p class="gallery_tags">energy supply</p>
+          <p class="gallery_tags">necessary ingredients</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-------------------------- MODAL ----------------------------->
+<!---------------------- MODAL WINDOW ---------------------->
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <!---------------------- MODAL INPUTS ---------------------->
+
+    <p class="modal__heading">leave your details in the form below</p>
+    <form>
+      <label class="modal__label" for="name">name</label>
+      <div class="modal__input-group">
+        <!-- <span
+          ><svg class="modal__input-icon" width="12" height="12">
+            <use href="images/icons.svg#icon-icon-human"></use></svg
+        ></span> -->
+        <input
+          class="modal__input-details single-line-input"
+          id="name"
+          type="text"
+          name="name"
+          required
+        />
+      </div>
+
+      <label class="modal__label" for="phone">phone</label>
+
+      <div class="modal__input-group">
+        <!-- <svg class="modal__input-icon" width="13" height="13">
+          <use href="images/icons.svg#icon-earphone"></use>
+        </svg> -->
+        <input
+          class="modal__input-details single-line-input"
+          id="phone"
+          type="tel"
+          name="phone"
+          required
+        />
+      </div>
+
+      <label class="modal__label" for="email">Email</label>
+
+      <div class="modal__input-group">
+        <!-- <svg class="modal__input-icon" width="15" height="12">
+          <use href="images/icons.svg#icon-envelope-II"></use>
+        </svg> -->
+        <input
+          class="modal__input-details single-line-input"
+          id="email"
+          type="email"
+          name="email"
+          required
+        />
+      </div>
+      <label class="modal__label" for="comment">comment</label>
+      <div class="modal__input-group-comment">
+        <textarea
+          class="modal__input-details multiple-line-input"
+          id="comment"
+          name="comment"
+          rows="6"
+          placeholder="Enter text"
+          required
+        ></textarea>
+      </div>
+      <label
+        class="modal__statement pointer"
+        for="regulations-and-privacy-policy"
+      >I declare that I accept&nbsp;<a
+          class="modal__regulations-policy"
+          href="#"
+          >the Regulations</a
+        >&nbsp;and&nbsp;
+        <a class="modal__regulations-policy" href="#"
+          >the Privacy Policy.</a
+        ><span class="modal__square pointer"></span>
+        <input
+          class="modal__checkbox"
+          id="regulations-and-privacy-policy"
+          type="checkbox"
+          name="regulations-and-privacy-policy"
+          required
+        />
+        <span>
+          <!-- <svg class="modal__checkbox-icon" width="16" height="15">
+            <use href="images/icons.svg#icon-icon-uncheck"></use>
+          </svg> -->
+        </span>
+      </label>
+      <button
+        class="button modal__button--gallery pointer"
+        type="submit"
+        name="send"
+      >send
+      </button>
+    </form>
+
+    <button class="modal__cross pointer" type="button" data-modal-close>
+      <svg class="modal__button-cross">
+        <use href="./images/modal X.svg#icon-modal-X"></use>
+      </svg>
+    </button>
+  </div>
+</div>
+

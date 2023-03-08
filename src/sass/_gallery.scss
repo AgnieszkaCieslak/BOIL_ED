@@ -1,0 +1,431 @@
+// MODAL GALLERY
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  left: 0px;
+  top: 0px;
+  transition-property: opacity, transform, visibility;
+  transition-duration: var(--t-duration);
+  transition-timing-function: var(--t-timing-function);
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: rotate(180deg);
+}
+.modal {
+  position:fixed;
+  padding: 40px;
+  max-width: 450px;
+  height: 609px;
+  position: absolute;
+  left: 50%;
+  // top: 50%;
+  top:25%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background: $color-first;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.modal__heading {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: $color-third;
+  text-shadow: 3px 3px 2px rgba(232, 232, 232, 0.24);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.modal__label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  color: $color-second;
+  // text-shadow: 3px 3px 2px rgba(232, 232, 232, 0.24);
+  margin-bottom: 4px;
+  display: block;
+  letter-spacing: 0.01em;
+  resize: none;
+  text-transform: capitalize;
+}
+.modal__input-details {
+  display: flex;
+  justify-content: center;
+  width: 75vw;
+  max-width: 370px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  outline-color: $color-third;
+  transition-property: border-color;
+  transition-duration: var(--t-duration);
+  transition-timing-function: var(--t-timing-function);
+  &:hover {
+    border-color: $color-third;
+  }
+}
+.single-line-input {
+  padding-left: 42px;
+  height: 40px;
+}
+.multiple-line-input {
+  margin-bottom: 0px;
+  padding-top: 15px;
+  padding-left: 16px;
+}
+.modal__input-group {
+  position: relative;
+  margin-bottom: 10px;
+  transition-property: fill;
+  transition-duration: var(--t-duration);
+  transition-timing-function: var(--t-timing-function);
+  &:hover {
+    fill: $color-third;
+    border-color: $color-third;
+  }
+  &:focus {
+    fill: $color-third;
+    border-color: $color-third;
+  }
+  &:focus-within {
+    fill: $color-third;
+  }
+}
+.modal__input-group-comment {
+  position: relative;
+  &:hover {
+    fill: $color-third;
+    border-color: $color-third;
+  }
+  &:focus {
+    fill: $color-third;
+    border-color: $color-third;
+  }
+  &:focus-within {
+    fill: $color-third;
+  }
+}
+textarea[id='comment'].modal__input-details::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.modal__statement {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding-left: 25px;
+  position: relative;
+  /* background-color:aquamarine; */
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  flex-wrap: wrap;
+  justify-content: left;
+  font-weight: 400;
+  line-height: 1.71;
+  color: $color-second;
+}
+.modal__regulations-policy {
+  color: $color-third;
+  text-decoration: none;
+}
+.modal__button-cross {
+  position: absolute;
+  top: 20%;
+  left: 18%;
+  display: flex;
+  width: 18px;
+  height: 18px;
+}
+
+.modal__button--gallery {
+  display: flex;
+  color: $color-second;
+  border-color: $color-second;
+  background-color: $color-first;
+  margin: 0 auto;
+  transition-duration: var(--t-duration);
+  transition-timing-function: var(--t-timing-function);
+  transition-property: color, background-color;
+}
+.modal__button--gallery:hover,
+.modal__button--gallery:focus {
+  background-color: $color-second;
+  color: $color-first;
+}
+
+.modal__cross {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 3;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: rgba(255, 0, 0, 0);
+  transition-property: fill, border;
+  transition-duration: var(--t-duration);
+  transition-timing-function: var(--t-timing-function);
+  &:hover,
+  &:focus {
+    fill: $color-third;
+  }
+}
+.gallery {
+  background-color: $color-first;
+}
+
+//------------------------ MAIN TITLE
+.gallery_title {
+  padding-left: 80px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: $color-second;
+  margin-bottom: 50px;
+}
+//------------------------ MAIN TITLE
+.gallery_title::before {
+  content: 'work';
+  position: absolute;
+  font-style: italic;
+  left: 40px;
+  top: 2px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  color: $color-second;
+}
+.gallery_title::after {
+  content: 'with attention to details';
+  position: absolute;
+  font-style: normal;
+  left: 40px;
+  top: 13px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: rgba(232, 232, 232, 0.48);
+}
+
+.gallery__button {
+  display: block;
+  color: $color-second;
+  border-color: $color-second;
+}
+.gallery__button--bottom {
+  @extend .gallery__button;
+  margin: 0 auto 30px;
+  transition-duration: var(--t-duration);
+  transition-timing-function: var(--t-timing-function);
+  transition-property: color, background-color;
+}
+.gallery__button--bottom:hover,
+.gallery__button--bottom:focus {
+  background-color: $color-second;
+  color: $color-first;
+}
+
+.gallery__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-left: 40px;
+  gap: 10px;
+}
+.gallery__item {
+  width: 100%;
+}
+.gallery__picture {
+  width: 620px;
+}
+
+.gallery_description {
+  position: relative;
+  text-transform: uppercase;
+  color: $color-second;
+  margin-bottom: 5px;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.gallery_description-breakfast {
+  position: absolute;
+  top: 4px;
+  left: -30px;
+}
+.gallery_description-lunch {
+  position: absolute;
+  top: 3px;
+  left: -30px;
+}
+.gallery_description-desert {
+  position: absolute;
+  top: 2px;
+  left: -30px;
+}
+.gallery_description-dinner {
+  position: absolute;
+  top: 2px;
+  left: -30px;
+}
+.gallery_tags {
+  display: none;
+}
+.gallery_tags-list {
+  display: none;
+}
+.gallery__image {
+  max-width: 310px;
+  max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+  //------------------------ MAIN TITLE
+  .gallery_title {
+    padding-left: 105px;
+    font-size: 40px;
+    line-height: 43px;
+    margin-bottom: 50px;
+  }
+  //------------------------ MAIN TITLE
+  .gallery_title::before {
+    content: 'work';
+    left: 50px;
+    top: 4px;
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .gallery_title::after {
+    content: 'with attention to details';
+    left: 50px;
+    top: 20px;
+    font-size: 40px;
+    line-height: 43px;
+  }
+
+  .gallery__button--upper {
+    display: none;
+  }
+  .gallery__button--bottom {
+    display: flex;
+    margin: 0 auto 35px;
+    // margin-bottom: 35px;
+    transition-duration: var(--t-duration);
+    transition-timing-function: var(--t-timing-function);
+    transition-property: color, background-color;
+  }
+  .gallery__button--bottom:hover,
+  .gallery__button--bottom:focus {
+    background-color: $color-second;
+    color: $color-first;
+  }
+
+  .gallery__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline: 30px;
+  }
+
+  .gallery__item {
+    width: 310px;
+    align-items: center;
+  }
+  .gallery__picture {
+    height: 435px;
+  }
+  .gallery__image {
+  }
+
+  .gallery_tags-list {
+    display: none;
+  }
+  .gallery_description {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  //------------------------ MAIN TITLE
+  .gallery_title {
+    padding-left: 160px;
+    font-size: 56px;
+    line-height: 60px;
+    margin-bottom: 50px;
+  }
+  //------------------------ MAIN TITLE
+  .gallery_title::before {
+    content: 'work';
+    left: 75px;
+    top: 5px;
+    font-size: 28px;
+    line-height: 30px;
+  }
+  .gallery_title::after {
+    content: 'with attention to details';
+    left: 75px;
+    top: 30px;
+    font-size: 56px;
+    line-height: 60px;
+  }
+  .gallery__button--bottom {
+    position: relative;
+    margin-left: 1200px;
+    margin-bottom: 0;
+  }
+  .gallery__button--bottom::after {
+    content: '';
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    background-color: $color-second;
+    border: 1px solid $color-second;
+    top: 40px;
+    right: -40px;
+  }
+  .gallery__list {
+    padding-inline: 70px;
+  }
+  .gallery__item {
+    width: 620px;
+    align-items: center;
+  }
+  .gallery_description {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+  }
+
+  .gallery_tags-list {
+    display: flex;
+    margin-bottom: 50px;
+  }
+
+  .gallery_tags {
+    display: flex;
+    background-color: rgba(232, 232, 232, 0.7);
+    color: $color-first;
+    margin-right: 10px;
+    padding-right: 20px;
+  }
+}

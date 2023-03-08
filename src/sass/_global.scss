@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --t-duration: 250ms;
+  --t-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: $color-first;
+}
+
+.button {
+  padding-block: 15px;
+  padding-inline: 40px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 25px;
+  background-color: $color-first;
+}
+.pointer {
+  cursor: pointer;
+}
+.list {
+  list-style-type: none;
+}
